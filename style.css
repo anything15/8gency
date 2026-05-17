@@ -13993,4 +13993,309 @@ body.light .site-header.sticked .agency-layout-switcher.ls_button.dark-active .n
     display: none !important;
 }
 
+
+
+/* ---------- shared tokens (locally scoped, won't leak) ---------- */
+.pricing-cards,
+.pricing-rows {
+    --p-line: rgba(255, 255, 255, 0.12);
+    --p-line-strong: rgba(255, 255, 255, 0.22);
+    --p-muted: #696969;
+    --p-body: #cfcfcf;
+}
+
+/* ---------- shared bits ---------- */
+.pricing-eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--p-muted);
+    margin: 0 0 24px;
+}
+
+.pricing-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    border: 1px solid currentColor;
+    color: inherit;
+}
+
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.pricing-price .price-from {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--p-muted);
+    margin-right: 4px;
+}
+
+.pricing-price .price-num {
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+}
+
+.pricing-unit {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: var(--p-muted);
+}
+
+/* feature list */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pricing-features li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--p-body);
+}
+
+.pricing-features .material-icons {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+
+/* =====================================================================
+   VARIATION B — editorial cards, featured raised
+   ===================================================================== */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    border: 1px solid var(--p-line);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    border-color: var(--p-line-strong);
+}
+
+.pricing-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pricing-card-head .material-icons {
+    font-size: 20px;
+    color: var(--p-muted);
+    font-weight: 300;
+}
+
+.pricing-card .pricing-spacer {
+    flex: 1;
+}
+
+/* featured (white, raised) */
+.pricing-card.featured {
+    background: #ffffff;
+    color: #000;
+    border-color: #ffffff;
+    padding: 48px 40px;
+    transform: translateY(-12px);
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+}
+
+.pricing-card.featured .pricing-tag {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.pricing-card.featured .pricing-card-head .material-icons {
+    color: #000;
+}
+
+.pricing-card.featured .pricing-price .price-from,
+.pricing-card.featured .pricing-unit {
+    color: #666;
+}
+
+.pricing-card.featured .pricing-features li {
+    color: #222;
+}
+
+.pricing-card.featured .pricing-features .material-icons {
+    color: #000;
+}
+
+/* featured plays nice with .agency-button — invert it */
+.pricing-card.featured .agency-button.outline a,
+.pricing-card.featured .agency-button.outline {
+    color: #000;
+    border-color: #000;
+}
+
+/* full-width CTA inside cards */
+.pricing-card .agency-button {
+    display: block;
+    width: 100%;
+}
+
+
+/* =====================================================================
+   VARIATION C — editorial rows (no cards)
+   ===================================================================== */
+.pricing-rows {
+    border-top: 1px solid var(--p-line);
+}
+
+.pricing-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 1.6fr 2.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--p-line);
+    transition: background 0.25s ease, padding 0.25s ease;
+}
+
+.pricing-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.pricing-row.featured::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #fff;
+}
+
+.pricing-row .pricing-num {
+    font-size: 13px;
+    color: var(--p-muted);
+    letter-spacing: 0.16em;
+    font-variant-numeric: tabular-nums;
+    padding-top: 8px;
+}
+
+.pricing-row .pricing-label h3 {
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin: 0 0 12px;
+}
+
+.pricing-row .pricing-label .meta {
+    font-size: 12px;
+    color: var(--p-muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.pricing-row .pricing-desc {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--p-body);
+}
+
+.pricing-row .pricing-desc .pricing-features {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+}
+
+.pricing-row .pricing-desc .pricing-features li {
+    font-size: 13px;
+    color: #bdbdbd;
+}
+
+.pricing-row .pricing-desc .pricing-features .material-icons {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.pricing-row .pricing-priceCol {
+    text-align: right;
+}
+
+.pricing-row .pricing-priceCol .price-from {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--p-muted);
+}
+
+.pricing-row .pricing-priceCol .price-num {
+    display: block;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-top: 6px;
+}
+
+.pricing-row .pricing-priceCol .pricing-unit {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+
+/* =====================================================================
+   responsive
+   ===================================================================== */
+@media (max-width: 992px) {
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .pricing-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 32px 0;
+    }
+
+    .pricing-row .pricing-priceCol {
+        text-align: left;
+    }
+
+    .pricing-row .pricing-desc .pricing-features {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Controls removed - no longer needed */
