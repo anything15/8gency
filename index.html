@@ -1,1712 +1,1246 @@
 <!DOCTYPE html>
-
-<html dir="ltr" lang="en-US">
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
 
+    <!-- Page Title -->
+    <title>8gency transforms businesses through intelligent AI automation</title>
+    <!--/ Page Title -->
 
+    <meta name="author" content="8gency">
+    <meta name="description" content="Ai first full stack agency based in the heart of Canary Wharf">
+    <meta name="keywords" content="Canary Wharf developers, Ai automation, Ai first agency">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-	<meta http-equiv="x-ua-compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<meta name="author" content="SemiColonWeb">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJZE9ZZLL2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+    // Default consent mode settings
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 2000
+    });
 
+    gtag('config', 'G-QJZE9ZZLL2');
+    </script>
 
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/hand-animation.css" rel="stylesheet">
 
-	<!-- Font Imports -->
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/site-favicon.png">
+    <link rel="apple-touch-icon" href="img/site-favicon.png">
+    <!--/ Favicons -->
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Color Options -->
+    <style id="agency-body-styles">
+        body.light {
+            --mainColor: #000000 !important;
+            --mainBackground: #ffffff !important;
+            --secondaryBackground: #ffffff !important;
+        }
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body.dark,
+        .light:not(body) {
+            --mainColor: #ffffff !important;
+            --mainBackground: #000000 !important;
+            --secondaryBackground: #000000 !important;
+        }
 
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </style>
+    <!--/ Color Options -->
 
-
-
-	<!-- Core Style -->
-
-	<link rel="stylesheet" href="style.css">
-
-
-
-	<!-- Font Icons -->
-
-	<link rel="stylesheet" href="css/font-icons.css">
-
-	<link rel="stylesheet" href="one-page/css/et-line.css">
-
-
-
-	<!-- One Page Module Specific Stylesheet -->
-
-	<link rel="stylesheet" href="one-page/onepage.css">
-
-
-
-	<!-- Custom CSS -->
-
-	<link rel="stylesheet" href="css/custom.css">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-	<!-- Document Title
-
-	============================================= -->
-
-	<title>One Page Module | Canvas</title>
-
-
+    <!-- Mobile Header Fix -->
+    <style>
+        @media (max-width: 768px) {
+            /* Add padding to main content on mobile to prevent header overlap */
+            .section.fullscreen:first-child {
+                padding-top: 80px !important;
+            }
+            
+            /* Make header background solid on mobile for better readability */
+            .site-header {
+                background: rgba(0, 0, 0, 0.95) !important;
+            }
+            
+            /* Reduce logo size on mobile if needed */
+            .site-logo img {
+                max-height: 40px;
+                width: auto;
+            }
+            
+            /* Adjust hero text position */
+            .section.fullscreen:first-child .wrapper {
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <!--/ Mobile Header Fix -->
 
 </head>
 
+<body class="light" data-barba="wrapper">
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); color: white; padding: 20px; z-index: 9999; text-align: center; border-top: 2px solid #666;">
+        <p style="margin: 0 0 15px 0; font-size: 14px;">We use cookies to improve your experience and analyze site usage. <a href="#" style="color: #fff; text-decoration: underline;">Learn more</a></p>
+        <button id="acceptCookies" style="background: #fff; color: #000; border: none; padding: 10px 20px; margin: 0 10px; cursor: pointer; border-radius: 4px;">Accept All</button>
+        <button id="declineCookies" style="background: transparent; color: #fff; border: 1px solid #fff; padding: 10px 20px; margin: 0 10px; cursor: pointer; border-radius: 4px;">Decline</button>
+    </div>
 
-<body class="stretched">
+    <script>
+    // Show consent banner if no choice made
+    if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookieConsent').style.display = 'block';
+    }
 
-	<div class="body-overlay"></div>
+    // Accept cookies
+    document.getElementById('acceptCookies').onclick = function() {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'functionality_storage': 'granted',
+            'personalization_storage': 'granted'
+        });
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookieConsent').style.display = 'none';
+    };
 
-	<div id="side-panel" class="dark">
+    // Decline cookies
+    document.getElementById('declineCookies').onclick = function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        document.getElementById('cookieConsent').style.display = 'none';
+    };
+    </script>
 
-		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="bi-x-lg"></i></a></div>
+    <!-- Page Loader -->
+    <div class="page-loader overlay up">
 
+        <!-- Logo -->
+        <div class="page-loader-logo">
 
+            <img alt=" Site Logo (Dark)" src="img/site-logo-light.png">
 
-		<div class="side-panel-wrap">
+        </div>
+        <!-- Logo -->
 
-			<div id="wufoo-ztmxjhn0oydxg6">
-				Fill out my <a href="https://aruniversal.wufoo.com/forms/ztmxjhn0oydxg6">online form</a>.
-				</div>
-				<script type="text/javascript">var ztmxjhn0oydxg6;(function(d, t) {
-				var s = d.createElement(t), options = {
-				'userName':'aruniversal',
-				'formHash':'ztmxjhn0oydxg6',
-				'autoResize':true,
-				'height':'2627',
-				'async':true,
-				'host':'wufoo.com',
-				'header':'show',
-				'ssl':true};
-				s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
-				s.onload = s.onreadystatechange = function() {
-				var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-				try { ztmxjhn0oydxg6 = new WufooForm();ztmxjhn0oydxg6.initialize(options);ztmxjhn0oydxg6.display(); } catch (e) {}};
-				var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-				})(document, 'script');</script>
-										
-										
-			</div>
+    </div>
+    <!--/ Page Loader -->
 
+    <!-- Page Transitions -->
+    <div class="agency-page-transition overlay up offset-x capt-center-center">
 
+        <!-- Caption -->
+        <div class="page-transition-caption">
+            LODAING, PLEASE WAIT...
+        </div>
+        <!--/ Caption -->
 
-		</div>
+    </div>
+    <!-- Page Transitions -->
 
-	</div>
+    <!-- Mouse Cursor -->
+    <div id="mouseCursor" class="dot light"> </div>
+    <!--/ Mouse Cursor -->
 
 
+    <!-- Page -->
+    <div id="page">
 
-	<!-- Document Wrapper
+        <div class="menu-overlay"></div>
 
-	============================================= -->
+        <!-- Site Header -->
+        <div id="header" class="site-header sticky dark">
 
-	<div id="wrapper">
+            <!-- Header Wrapper -->
+            <div class="header-wrapper wrapper">
 
+                <div class="c-col-4 sm-6">
 
+                    <!--  Site Branding -->
+                    <div class="site-branding">
 
-		<!-- Header
+                        <!--  Site Logo -->
+                        <div class="site-logo">
 
-		============================================= -->
+                            <img alt="Site Logo (Dark)" class="dark-logo" src="img/site-logo.png">
+                            <img alt="Site Logo (Light)" class="light-logo" src="img/site-logo-light.png">
 
-		<header id="header" class="full-header transparent-header border-full-header dark header-size-custom" data-sticky-shrink="false" data-sticky-class="not-dark" data-sticky-offset="full" data-sticky-offset-negative="auto">
+                        </div>
+                        <!--/  Site Logo -->
 
-			<div id="header-wrap">
+                        <!--  Sticky Logo -->
+                        <div class="sticky-logo">
 
-				<div class="container">
+                            <img alt="Sticky Logo (Dark)" class="sticky-dark-logo" src="img/sticky_logo.png">
+                            <img alt="Sticky Logo (Light)" class="sticky-light-logo" src="img/sticky_logo_light.png">
 
-					<div class="header-row">
+                        </div>
+                        <!--/  Sticky Logo -->
 
+                    </div>
+                    <!--  Site Branding -->
 
+                </div>
 
-						<!-- Logo
+                <div class="c-col-4 hide-mobile">
 
-						============================================= -->
 
-						<div id="logo">
 
-							<a href="index.html">
+                </div>
 
-								<img class="logo-default" srcset="one-page/images/canvasone.png, one-page/images/canvasone@2x.png 2x" src="one-page/images/canvasone@2x.png" alt="Canvas Logo">
+                <div class="c-col-4 sm-6 align-right">
 
-								<img class="logo-dark" srcset="one-page/images/canvasone-dark.png, one-page/images/canvasone-dark@2x.png 2x" src="one-page/images/canvasone-dark@2x.png" alt="Canvas Logo">
 
-							</a>
 
-						</div><!-- #logo end -->
 
 
 
-						<div class="header-misc">
+                    <div class="agency-layout-switcher ls_button ">
 
+                        <div>
+                            <div class="nls-hold">
+                                <div>LIGHT</div>
+                                <div>DARK</div>
+                            </div>
+                        </div>
 
+                        <div class="nls-dot"></div>
 
-							<div class="side-panel-trigger header-misc-icon">
+                    </div>
 
-								<a href="#"><i class="bi-three-dots-vertical"></i></a>
 
-							</div>
+                    <!--  Menu Toggle -->
+                    <div class="menu-toggle">
 
+                        <div class="toggle-lines">
 
+                            <div class="toggle-line"></div>
+                            <div class="toggle-line"></div>
+                            <div class="toggle-line"></div>
+                        </div>
 
-						</div>
 
+                    </div>
+                    <!--/  Menu Toggle -->
 
+                </div>
 
-						<div class="primary-menu-trigger">
+            </div>
+            <!--/ Header Wrapper -->
 
-							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+            <!-- Fullscreen Menu -->
+            <div id="site-navigation" class="fullscreen_menu fullscreen">
 
-								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                <div class="wrapper fullscreen-menu-wrapper">
 
-							</button>
 
-						</div>
 
+                    <div class="c-col-3 hide-mobile self-center">
 
+                        <!-- Menu -->
+                        <ul class="menu" data-animation="linesUp">
 
-						<!-- Primary Navigation
+                            <li><a href="#">twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
 
-						============================================= -->
 
-						<nav class="primary-menu">
+                        </ul>
+                        <!--/ Menu -->
 
+                    </div>
 
+                    <div class="c-col-6 sm-12">
 
-							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+                        <!-- Main Menu -->
+                        <ul class="menu main-menu">
 
-								<li class="menu-item">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#ß">Pricing</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Console</a></li>
+                            <li><a href="#">Contact</a></li>
 
-									<a href="#" class="menu-link" data-href="#wrapper"><div>Home</div></a>
+                        </ul>
+                        <!--/ Main Menu -->
 
-								</li>
+                    </div>
 
-								<li class="menu-item">
+                    <!-- Empty Column (For Spacing) -->
+                    <div class="c-col-2 hide-mobile"></div>
+                    <!--/ Empty Column (For Spacing) -->
 
-									<a href="#" class="menu-link" data-href="#section-about"><div>About</div></a>
+                    <!-- Fullscreen Menu Bottom -->
+                    <div class="fullscreen-menu-wrap-bottom">
 
-								</li>
+                        <div class="c-col-3 hide-mobile has-anim maskDown" data-delay=.2>
 
-								<li class="menu-item">
 
-									<a href="#" class="menu-link" data-href="#section-works"><div>Works</div></a>
 
-								</li>
+                        </div>
 
-								<li class="menu-item">
+                        <!-- Empty Column (For Spacing) -->
+                        <div class="c-col-3 hide-mobile"> </div>
+                        <!--/ Empty Column (For Spacing) -->
 
-									<a href="#" class="menu-link" data-href="#section-services"><div>Services</div></a>
+                        <div class="c-col-3 sm-12 has-anim fadeDown" data-delay=.4>
 
-								</li>
 
-								<li class="menu-item">
 
-									<a href="#" class="menu-link" data-href="#section-blog"><div>Blog</div></a>
+                        </div>
 
-								</li>
 
-								<li class="menu-item">
+                    </div>
+                    <!--/ Fullscreen Menu Bottom -->
 
-									<a href="#" class="menu-link" data-href="#section-contact"><div>Contact</div></a>
+                </div>
 
-								</li>
+            </div>
+            <!-- Fullscreen Menu -->
 
-							</ul>
+        </div>
+        <!--/ Site Header -->
 
+        <!-- Fullscreen Menu (for mobile) -->
+        <div id="site-navigation" class="fullscreen_menu fullscreen">
 
+            <div class="wrapper fullscreen-menu-wrapper">
 
-						</nav><!-- #primary-menu end -->
+                <div class="c-col-6 sm-12">
 
+                    <ul class="menu main-menu">
 
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#ß">Pricing</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Console</a></li>
+                        <li><a href="#">Contact</a></li>
 
-					</div>
+                    </ul>
 
-				</div>
+                </div>
 
-			</div>
+                <!-- Fullscreen Menu Bottom -->
+                <div class="fullscreen-menu-wrap-bottom">
+                    <div class="c-col-3 sm-12 has-anim fadeDown" data-delay=.4>
 
-			<div class="header-wrap-clone"></div>
+                        <!-- Button -->
+                        <div class="agency-button underline icon-right" data-icon="arrow_outward">
 
-		</header><!-- #header end -->
+                            <a href="#">hello@8gency.io</a>
 
+                        </div>
+                        <!--/ Button -->
 
+                    </div>
 
-		<!-- Slider
+                </div>
+                <!--/ Fullscreen Menu Bottom -->
 
-		============================================= -->
+            </div>
 
-		<section id="slider" class="slider-element slider-parallax dark min-vh-60 min-vh-md-100 include-header">
+        </div>
+        <!-- Fullscreen Menu (for mobile) -->
 
-			<div class="slider-inner" style="background-image: url('one-page/images/page/main.jpg'); background-size: cover; background-position: center center;">
+        <!-- Main -->
+        <main id="primary" class="site-main" data-barba="container">
 
+            <!-- Page Content -->
+            <div id="content" class="page-content">
 
+                <div class="section fullscreen" style="background-color: var(--mainBackground);">
 
-				<div class="vertical-middle slider-element-fade">
+                    <div class="section-background">
 
-					<div class="container text-center py-5">
+                        <div class="c-col-12 no-gap">
 
-						<div class="emphasis-title">
+                            <!-- Hand Animation Container -->
+                            <div class="hand-animation-container">
+                                <!-- Agent Hands will be created dynamically by JavaScript -->
 
-							<h1>
+                                <!-- Human Hand (From Right) -->
+                                <img class="human-hand" src="handofHuman.png" alt="Human Hand">
 
-								<span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn" data-speed="6000">
+                                <!-- Particle Lines Container -->
+                                <div class="particle-lines-container">
+                                    <!-- Lines will be created dynamically -->
+                                </div>
+                            </div>
+                            <!--/ Hand Animation Container -->
 
-									<span class="t-rotate fw-bold font-body opm-large-word">Executive.|London.|Minibus.|Hire.|Inspired.</span>
+                        </div>
 
-								</span>
+                    </div>
 
-							</h1>
 
-						</div>
 
-						<a href="#" class="button button-border button-light button-circle" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Book Now</a>
-						<a href="#" class="button button-xlarge button-rounded side-panel-trigger mb-5">Open Side Panel</a>
-					</div>
+                    <div class="wrapper no-margin">
 
-				</div>
+                        <div class="c-col-12 hide-mobile">
 
+                            <!-- Empty Space -->
+                            <span class="empty-space hide-mobile" style="height: 295px"></span>
+                            <!-- Empty Space -->
 
+                        </div>
 
-				<div class="video-wrap">
+                        <div class="c-col-6 sm-12 self-center">
 
-					<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                            <!-- Text -->
+                            <div class="text-wrapper" data-delay=.5>
 
-				</div>
+                                <p class="text-h1 no-revert no-margin">Let there be agents</p>
+                                <p class="text-h4" style="margin-top: 20px;">Bringing Your Businesses Vision To Life Using A.i & Automation
+                                </p>
 
+                            </div>
+                            <!--/ Text -->
+                            <!-- Button -->
+                            <div class="agency-button outline icon-left" data-icon="arrow_outward">
 
+                                <a href="#" onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Book A Call - Hero' });">Book A Call</a>
+                            
+                            </div>
+                            <!--/ Button -->
+                            <!-- Button -->
+                            <div class="agency-button outline icon-right" data-icon="arrow_outward">
 
-				<a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="65" class="one-page-arrow dark"><i class="bi-chevron-down infinite animated fadeInDown"></i></a>
+                                <a href="#" onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Find Out More - Hero' });">Find Out More</a>
 
+                            </div>
+                            <!--/ Button -->
 
+                        </div>
 
-			</div>
+                        <div class="c-col-6 sm-12 self-center">
 
-		</section><!-- #slider end -->
+                            <!-- Empty Column for Spacing -->
+                            <div></div>
 
+                        </div>
 
 
-		<!-- Content
 
-		============================================= -->
+                        <div class="c-col-6 align-bottom align-right">
 
-		<section id="content">
+                            <!-- Text -->
+                            <div class="text-wrapper">
 
-			<div class="content-wrap py-0">
+                                <p>© 2025</p>
 
+                            </div>
+                            <!--/ Text -->
 
+                        </div>
 
-				<div id="section-about" class="text-center page-section">
+                    </div>
 
+                </div>
 
 
-					<div class="container">
 
+                <div id="sec1" class="section light anim-bg" style="background: #191919">
+                    <div class="wrapper" style="height: 100vh" >
 
+                        <!-- Empty Space -->
+                        <span class="empty-space hide-mobile" style="height: 100px"></span>
+                        <!--/ Empty Space -->
+                        
+                        
+                        <div class="c-col-4 sm-12">
 
-						<h2 class="mx-auto mb-5 font-body" style="max-width: 700px; font-size: 40px;">A digital web studio creating stunning &amp; engaging online experiences</h2>
+                            <div class="text-wrapper">
 
+                                <h2 class="has-anim-text charsUp fade" data-scrub=true>Beyond software, we architect ecosystems that generate real value</h2>
 
+                            </div>
 
-						<p class="lead mx-auto mb-5" style="max-width: 800px;">Ford Foundation reduce child mortality fight against oppression refugee disruption pursue these aspirations effect. Free-speech Nelson Mandela change liberal; challenges of our times sustainability institutions.</p>
 
+                        </div>
 
+                        <div class="c-col-4 hide-mobile"></div>
+                        <div class="c-col-4 sm-12">
 
-						<p class="mb-5" style="font-size: 16px;"><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Learn more <i class="uil uil-angle-right-b"></i></a></p>
+                            <div class="text-wrapper">
 
+                                <p>We're an AI-first agency that ships fast and thinks faster. From AI automation to SaaS builds, Web3 and SEO, we help health, property, travel and finance brands find their edge — and scale it.</p>
 
+                            </div>
 
-						<div class="clear"></div>
+                        </div>
 
+                    </div>
 
 
-						<div class="row mt-6 mx-auto" style="max-width: 1000px;">
+                </div>
 
 
 
-							<div class="col-md-4 mb-5">
 
 
 
-								<div class="team">
+                <div class="section">
 
-									<div class="team-image">
+                    <div class="wrapper" style="height: 100vh" id="carouselPin">
 
-										<img src="one-page/images/team/1.jpg" alt="John Doe">
+                        <!-- Empty Space -->
+                        <span class="empty-space hide-mobile" style="height: 50px"></span>
+                        <!--/ Empty Space -->
 
-										<div class="bg-overlay">
 
-											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+                        <!-- Divider -->
+                        <div class="agency-divider"></div>
+                        <!--/ Divider -->
 
-												<a href="#" class="social-icon bg-transparent h-bg-facebook" title="Facebook">
+                        <div class="c-col-6 sm-12">
 
-													<i class="fa-brands fa-facebook-f"></i>
+                            <!-- Text -->
+                            <div class="text-wrapper">
 
-													<i class="fa-brands fa-facebook-f"></i>
+                                <p class="text-h3 has-anim-text charsUp">The industries we live in</p>
 
-												</a>
+                            </div>
+                            <!--/ Text -->
 
-												<a href="#" class="social-icon bg-transparent h-bg-twitter" title="Twitter">
+                        </div>       
+                        
+                        
 
-													<i class="fa-brands fa-twitter"></i>
+                        <div class="c-col-12">
 
-													<i class="fa-brands fa-twitter"></i>
+                            <!-- Text -->
+                            <div class="text-wrapper">
 
-												</a>
+                                <p class="text-h2 has-anim-text wordsUp fade" data-scrub=true>We don't dabble. We specialise. </p>
 
-												<a href="#" class="social-icon bg-transparent h-bg-github" title="Github">
+                            </div>
+                            <!--/ Text -->
 
-													<i class="fa-brands fa-github"></i>
+                        </div>                        
+                        
 
-													<i class="fa-brands fa-github"></i>
 
-												</a>
 
-											</div>
+                        <div class="c-col-12">
 
-											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+                            <!-- Dynamic Carousel -->
+                            <div class="agency-dynamic-carousel navScroll eq-height parallax-on" data-animation="slideUp" data-stagger=0.1 data-scroll-speed="3000" data-pin="#carouselPin" style="--w: 30vw;--gap: 100px;">
 
-										</div>
+                                <div class="carousel--wrapper">
 
-									</div>
+                                    <!-- Carousel Item -->
+                                    <div class="carousel--item">
 
-									<div class="team-desc team-desc-bg">
+                                        <!-- Info Box -->
+                                        <div class="agency-info-box">
 
-										<div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
+                                            <!-- Top Section -->
+                                            <div class="info-box-top">
 
-									</div>
+                                                <div class="agency-icon" style="--fontSize: 40px;--wgt: 100;--color: #696969">
 
-								</div>
+                                                    <span class="material-icons">
+                                                        healing
+                                                    </span>
 
+                                                </div>
 
+                                            </div>
+                                            <!-- /Top Section -->
 
-							</div>
+                                            <!-- Content -->
+                                            <div class="info-box-content">
 
+                                                <!-- Text -->
+                                                <div class="text-wrapper">
 
+                                                    <p class="text-h3">Health</p>
 
-							<div class="col-md-4 mb-5">
+                                                    <p style="color: #696969">Whether you need a custom practice management system or you need to plugin to our existing Zenli platform, we have you covered.</p>
 
-								<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+                                                </div>
+                                                <!--/ Text -->
 
-<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    ...
-  </div>
-</div>
+                                            </div>
+                                            <!--/ Content -->
 
-								<div class="team">
+                                        </div>
+                                        <!--/ Info Box -->
 
-									<div class="team-image">
+                                    </div>
+                                    <!--/ Carousel Item -->
 
-										<img src="one-page/images/team/2.jpg" alt="Josh Clark">
+                                    <!-- Carousel Item -->
+                                    <div class="carousel--item">
 
-										<div class="bg-overlay">
+                                        <!-- Info Box -->
+                                        <div class="agency-info-box">
 
-											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+                                            <!-- Top Section -->
+                                            <div class="info-box-top">
 
-												<a href="#" class="social-icon bg-transparent h-bg-twitter" title="Twitter">
+                                                <div class="agency-icon" style="--fontSize: 40px;--wgt: 100;--color: #696969">
 
-													<i class="fa-brands fa-twitter"></i>
+                                                    <span class="material-icons">
+                                                        house
+                                                    </span>
+                                                </div>
 
-													<i class="fa-brands fa-twitter"></i>
+                                            </div>
+                                            <!-- /Top Section -->
 
-												</a>
+                                            <!-- Content -->
+                                            <div class="info-box-content">
 
-												<a href="#" class="social-icon bg-transparent h-bg-linkedin" title="LinkedIn">
+                                                <!-- Text -->
+                                                <div class="text-wrapper">
 
-													<i class="fa-brands fa-linkedin"></i>
+                                                    <p class="text-h3">Property</p>
 
-													<i class="fa-brands fa-linkedin"></i>
+                                                    <p style="color: #696969">From small to medium trades businesses to property management companies , our Ai first infrastructure automates your workflows and deliver measurable ROI.</p>
 
-												</a>
+                                                </div>
+                                                <!--/ Text -->
 
-												<a href="#" class="social-icon bg-transparent h-bg-flickr" title="Flickr">
+                                            </div>
+                                            <!--/ Content -->
 
-													<i class="fa-brands fa-flickr"></i>
+                                        </div>
+                                        <!--/ Info Box -->
 
-													<i class="fa-brands fa-flickr"></i>
+                                    </div>
+                                    <!--/ Carousel Item -->
 
-												</a>
+                                    <!-- Carousel Item -->
+                                    <div class="carousel--item">
 
-											</div>
+                                        <!-- Info Box -->
+                                        <div class="agency-info-box">
 
-											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+                                            <!-- Top Section -->
+                                            <div class="info-box-top">
 
-										</div>
+                                                <div class="agency-icon" style="--fontSize: 40px;--wgt: 100;--color: #696969">
 
-									</div>
+                                                    <span class="material-icons">
+                                                        
+                                                            airport_shuttle
+                                                            
+                                    
+                                                    </span>
 
-									<div class="team-desc team-desc-bg">
+                                                </div>
 
-										<div class="team-title"><h4>Mary Jane</h4><span>Co-Founder</span></div>
+                                            </div>
+                                            <!-- /Top Section -->
 
-									</div>
+                                            <!-- Content -->
+                                            <div class="info-box-content">
 
-								</div>
+                                                <!-- Text -->
+                                                <div class="text-wrapper">
 
+                                                    <p class="text-h3">Transport</p>
 
+                                                    <p style="color: #696969">Our transport and logistics applications make planning your operations a breeze. </p>
 
-							</div>
+                                                </div>
+                                                <!--/ Text -->
 
+                                            </div>
+                                            <!--/ Content -->
 
+                                        </div>
+                                        <!--/ Info Box -->
 
-							<div class="col-md-4 mb-5">
+                                    </div>
+                                    <!--/ Carousel Item -->
 
+                                    <!-- Carousel Item -->
+                                    <div class="carousel--item">
 
+                                        <!-- Info Box -->
+                                        <div class="agency-info-box">
 
-								<div class="team">
+                                            <!-- Top Section -->
+                                            <div class="info-box-top">
 
-									<div class="team-image">
+                                                <div class="agency-icon" style="--fontSize: 40px;--wgt: 100;--color: #696969">
 
-										<img src="one-page/images/team/3.jpg" alt="Mary Jane">
+                                                    <span class="material-icons">
+                                                        wallet
+                                                    </span>
 
-										<div class="bg-overlay">
+                                                </div>
 
-											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
 
-												<a href="#" class="social-icon bg-transparent h-bg-twitter" title="Twitter">
+                                            </div>
+                                            <!-- /Top Section -->
 
-													<i class="fa-brands fa-twitter"></i>
+                                            <!-- Content -->
+                                            <div class="info-box-content">
 
-													<i class="fa-brands fa-twitter"></i>
+                                                <!-- Text -->
+                                                <div class="text-wrapper">
 
-												</a>
+                                                    <p class="text-h3">Web3</p>
 
-												<a href="#" class="social-icon bg-transparent h-bg-vimeo" title="Vimeo">
+                                                    <p style="color: #696969">Unite your scattered data sources into a single source of truth. We build automated pipelines, real-time dashboards, and predictive analytics that transform raw data into strategic advantages and actionable insights.</p>
 
-													<i class="fa-brands fa-vimeo-v"></i>
+                                                </div>
+                                                <!--/ Text -->
 
-													<i class="fa-brands fa-vimeo-v"></i>
+                                            </div>
+                                            <!--/ Content -->
 
-												</a>
+                                        </div>
+                                        <!--/ Info Box -->
 
-												<a href="#" class="social-icon bg-transparent h-bg-instagram" title="Instagram">
+                                    </div>
+                                    <!--/ Carousel Item -->
+                         
+                                    
+                                    <!-- Carousel Item -->
+                                    <div class="carousel--item">
 
-													<i class="bi-instagram"></i>
+                                        <!-- Info Box -->
+                                        <div class="agency-info-box">
 
-													<i class="bi-instagram"></i>
+                                            <!-- Top Section -->
+                                            <div class="info-box-top">
 
-												</a>
+                                                <div class="agency-icon" style="--fontSize: 40px;--wgt: 100;--color: #696969">
 
-											</div>
+                                                    <span class="material-icons">
+                                                        smart_toy
+                                                    </span>
 
-											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+                                                </div>
 
-										</div>
 
-									</div>
+                                            </div>
+                                            <!-- /Top Section -->
 
-									<div class="team-desc team-desc-bg">
+                                            <!-- Content -->
+                                            <div class="info-box-content">
 
-										<div class="team-title"><h4>Josh Clark</h4><span>Sales</span></div>
+                                                <!-- Text -->
+                                                <div class="text-wrapper">
 
-									</div>
+                                                    <p class="text-h3">Ai chatbots</p>
 
-								</div>
+                                                    <p style="color: #696969">Deploy intelligent conversational AI that handles customer inquiries 24/7. From web chat to voice assistants, our bots understand context, learn from interactions, and seamlessly escalate to humans when needed.</p>
 
+                                                </div>
+                                                <!--/ Text -->
 
+                                            </div>
+                                            <!--/ Content -->
 
-							</div>
+                                        </div>
+                                        <!--/ Info Box -->
 
+                                    </div>
+                                    <!--/ Carousel Item -->                                    
+                                  
 
 
-						</div>
+                                </div>
 
 
+                            </div>
+                            <!-- Dynamic Carousel -->
 
-					</div>
+                        </div>
 
+                    </div>
 
+                </div>
 
-				</div>
 
+                <div class="section light anim-bg no-margin" style="background: #191919">
 
+                    <div class="wrapper">
+                
+                        <div class="c-col-8 sm-12">
+                
+                            <!-- Text -->
+                            <div class="text-wrapper">
+                
+                                <p class="text-h1 has-anim-text linesMask" data-scrub=true data-delay=1>Initial Reports & Feasability</p>
+                
+                            </div>
+                            <!--/ Text -->
+                
+                        </div>
+                
+                
+                        <div class="c-col-12">
+                
+                            <!-- Divider -->
+                            <div class="agency-divider detect-pov" style="width: 100%"></div>
+                            <!--/ Divider -->
+                
+                        </div>
+                
+                        <div class="c-col-6 sm-12">
+                
+                            <!-- Text -->
+                            <div class="text-wrapper">
+                
+                                <p class="text-h6">From the ground up or scale your existing systems</p>
+                
+                            </div>
+                            <!--/ Text -->
+                
+                        </div>
+                
+                        <div class="c-col-6 sm-12">
+                
+                            <!-- Accordion Small -->
+                            <div class="agency-accordion" data-duration="0.5" data-animation="wordsUp" data-toggle-icon="fiber_manual_record">
+                
+                                <ul class="accordion-wrap">
+                
+                                    <!-- Accordion Item -->
+                                    <li class="accordion-item">
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">What Gets Built & When</div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">We rank every feature by what it's worth and what it costs — so you always know what to build next and why.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item -->
+                
+                
+                                    <!-- Accordion Item -->
+                                    <li class="accordion-item">
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">The Return Breakdown </div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">We translate product decisions into financial outcomes — so you're never building blind.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item -->
+                
+                                    <!-- Accordion Item -->
+                                    <li class='accordion-item'>
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">User Flow Analysis</div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">We trace every step your users take, pinpoint exactly where they leave, and calculate what each drop-off is costing you every month.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item -->
+                                
+                                    <!-- Accordion Item -->
+                                    <li class='accordion-item'>
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">Codebase Audit</div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">We get inside your code, understand what's holding it together, and tell you exactly what needs to change and how to change it.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item --> 
+                                    
+                                    <!-- Accordion Item -->
+                                    <li class='accordion-item'>
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">The Landscape Analysis</div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">Five to seven direct competitors dissected — features, pricing, tech, UX and performance — so you know precisely what to build and what to ignore.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item -->  
+                                    
+                                    <!-- Accordion Item -->
+                                    <li class='accordion-item'>
+                
+                                        <!-- Title -->
+                                        <div class="accordion-title text-h6">SEO & Performance Review</div>
+                                        <!--/ Title -->
+                
+                                        <!-- Content -->
+                                        <div class="accordion-content">
+                
+                                            <p class="text-h6">A full SEO and performance marketing audit, followed by a growth strategy built around what will actually move the needle.</p>
+                
+                                        </div>
+                                        <!--/ Content -->
+                
+                                    </li>
+                                    <!--/ Accordion Item -->                                    
+                
+                
+                                </ul>
+                
+                            </div>
+                            <!--/ Accordion Small -->
+                
+                            <!-- Empty Space -->
+                            <span class="empty-space" style="height: 100px"></span>
+                            <!--/ Empty Space -->
+                
 
-				<div id="section-works" class="page-section pt-0">
+                
+                        </div>
+                
+                    </div>
+                
+                
+                </div>
+                
 
+                <div class="section light anim-bg no-margin" style="background: #191919">
+                <!--price cards here -->
 
+                </div>    
 
-					<div class="section m-0">
 
-						<div class="container">
 
-							<div class="mx-auto text-center" style="max-width: 900px;">
+                
+                    <div class="wrapper">
 
-								<h2 class="mb-0 fw-light ls-1">We create &amp; craft projects that ooze creativity in every aspect. We try to create a benchmark in everything we do. Take a moment to browse through some of our recent completed work.</h2>
+                        <div class="c-col-4 sm-12 has-parallax" data-parallax-direction="down" data-parallax-speed=15>
 
-							</div>
+                            <!-- Info Box -->
+                            <div class="agency-info-box has-bg light" style="background: #191919;--height: 500px">
 
-						</div>
+                                <!-- Top Section -->
+                                <div class="info-box-top">
 
-					</div>
+                                    <div class="agency-icon" style="--fontSize: 70px;--wgt: 100">
 
+                                        <span class="material-icons">
+                                            format_quote
+                                        </span>
 
+                                    </div>
 
-					<!-- Portfolio Items
+                                </div>
+                                <!-- /Top Section -->
 
-					============================================= -->
+                                <!-- Content -->
+                                <div class="info-box-content">
 
-					<div class="portfolio grid-container row g-0">
+                                    <!-- Text -->
+                                    <div class="text-wrapper">
 
+                                        
 
+                                        <p style="color: #696969">"We came to 8gency with a vague idea and left with a working product in six weeks. They don't just build what you ask for — they push back, sharpen the brief, and ship something better than you imagined. Genuinely the most useful agency relationship I've had."</p>
+                                        <p class="text-h5">Marcus Berswick</p></br>
+                                        <p style="color: #696969">Founder & CEO</p>
 
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+                                    </div>
+                                    <!--/ Text -->
 
-							<div class="grid-inner">
+                                </div>
+                                <!--/ Content -->
 
-								<div class="portfolio-image">
+                            </div>
+                            <!--/ Info Box -->
 
-									<a href="#">
+                        </div>
 
-										<img src="one-page/images/portfolio/mixed/1.jpg" alt="Open Imagination">
+                        <div class="c-col-4 sm-12 has-anim slideUp">
 
-									</a>
+                            <!-- Info Box -->
+                            <div class="agency-info-box has-bg light" style="background: #191919;--height: 500px">
 
-									<div class="bg-overlay">
+                                <!-- Top Section -->
+                                <div class="info-box-top">
 
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+                                    <div class="agency-icon" style="--fontSize: 70px;--wgt: 100">
 
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+                                        <span class="material-icons">
+                                            format_quote
+                                        </span>
 
-												<h3><a href="#">Open Imagination</a></h3>
+                                    </div>
 
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+                                </div>
+                                <!-- /Top Section -->
 
-											</div>
+                                <!-- Content -->
+                                <div class="info-box-content">
 
-										</div>
+                                    <!-- Text -->
+                                    <div class="text-wrapper">
 
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
 
-									</div>
 
-								</div>
+                                        <p style="color: #696969">"What sold me was how they think. Every recommendation came with a number attached — revenue impact, dev cost, timeline. No fluff, no padding. We've doubled qualified leads since launch and the platform they built actually scales. Worth every penny."</p>
+                                        <p class="text-h5">Matthew Cohen</p></br>
+                                        <p style="color: #696969">Head of Product</p>
 
-							</div>
+                                    </div>
+                                    <!--/ Text -->
 
-						</article>
+                                </div>
+                                <!--/ Content -->
 
+                            </div>
+                            <!--/ Info Box -->
 
+                        </div>
 
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="c-col-4 sm-12 has-parallax" data-parallax-direction="down" data-parallax-speed=15>
 
-							<div class="grid-inner">
+                            <!-- Info Box -->
+                            <div class="agency-info-box has-bg light" style="background: #191919;--height: 500px">
 
-								<div class="portfolio-image">
+                                <!-- Top Section -->
+                                <div class="info-box-top">
 
-									<a href="#">
+                                    <div class="agency-icon" style="--fontSize: 70px;--wgt: 100">
 
-										<img src="one-page/images/portfolio/mixed/2.jpg" alt="Locked Steel Gate">
+                                        <span class="material-icons">
+                                            format_quote
+                                        </span>
 
-									</a>
+                                    </div>
 
-									<div class="bg-overlay">
+                                </div>
+                                <!-- /Top Section -->
 
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+                                <!-- Content -->
+                                <div class="info-box-content">
 
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+                                    <!-- Text -->
+                                    <div class="text-wrapper">
 
-												<h3><a href="#">Locked Steel Gate</a></h3>
+                                        
 
-												<span><a href="#">Illustrations</a></span>
+                                        <p style="color: #696969">"The competitive audit alone was worth the engagement. They showed us three features we were about to build that nobody actually wanted — and one we'd completely missed that's now our biggest acquisition driver. That kind of clarity is rare."</p>
+                                        <p class="text-h5">Dmitri Volkov</p></br>
+                                        <p style="color: #696969">Co-Founder</p>
 
-											</div>
 
-										</div>
+                                    </div>
+                                    <!--/ Text -->
 
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+                                </div>
+                                <!--/ Content -->
 
-									</div>
+                            </div>
+                            <!--/ Info Box -->
+                        </div>
 
-								</div>
+                    </div>
 
-							</div>
 
-						</article>
 
 
+                <div class="section">
 
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="wrapper">
 
-							<div class="grid-inner">
 
-								<div class="portfolio-image">
 
-									<a href="#">
+                        <!-- Empty Column (For Spacing) -->
+                        <div class="c-col-2 hide-mobile"></div>
+                        <!-- Empty Column (For Spacing) -->
 
-										<img src="one-page/images/portfolio/mixed/3.jpg" alt="Mac Sunglasses">
+                        <div class="c-col-4 sm-12 align-right">
 
-									</a>
+                            
 
-									<div class="bg-overlay">
+                        </div>
 
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+                    </div>
 
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+                </div>
 
-												<h3><a href="#">Mac Sunglasses</a></h3>
+                <div class="section">
 
-												<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
+                    <div class="wrapper">
 
-											</div>
+                        <div class="c-col-12 cursor-icon">
 
-										</div>
+                            <!-- Marquee -->
+                            <div class="agency-marquee right-to-left" data-duration="7" data-seperator="">
+                                <span class="marquee-logo-wrapper"><img src="industryLogos/1x/Artboard 1.png" alt="Industry Logo 1" class="marquee-logo"></span>
+                                <span class="marquee-logo-wrapper"><img src="industryLogos/1x/Artboard 1_1.png" alt="Industry Logo 2" class="marquee-logo"></span>
+                                <span class="marquee-logo-wrapper"><img src="industryLogos/1x/Artboard 1_2.png" alt="Industry Logo 3" class="marquee-logo"></span>
+                                <span class="marquee-logo-wrapper"><img src="industryLogos/1x/Artboard 1_3.png" alt="Industry Logo 4" class="marquee-logo"></span>
+                                <span class="marquee-logo-wrapper"><img src="industryLogos/1x/Artboard 1_4.png" alt="Industry Logo 5" class="marquee-logo"></span>
+                            </div>
+                            <!--/ Marquee -->
 
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+                        </div>
 
-									</div>
+                    </div>
 
-								</div>
+                </div>
 
-							</div>
+            </div>
+            <!--/ Page Content -->
 
-						</article>
+        </main>
+        <!--/ Main -->
 
+        <!-- Footer -->
+        <div id="footer" class="site-footer">
 
+            <!-- Divider -->
+            <div class="agency-divider"></div>
+            <!--/ Divider -->
 
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+            <div class="footer-wrapper">
 
-							<div class="grid-inner">
+                <div class="wrapper footer-top-wrapper">
 
-								<div class="portfolio-image">
+                    <div class="c-col-6 sm-12">
 
-									<a href="#">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo-wrapper">
+                            <div class="single-image footer-dark-logo" style="width: 50px">
+                                <img alt="Site Emblem Dark" src="img/site_emblem_light.png">
+                            </div>
+                            <div class="single-image footer-light-logo" style="width: 50px">
+                                <img alt="Site Emblem Light" src="img/site_emblem_dark.png">
+                            </div>
+                        </div>
+                        <!--/ Footer Logo -->                        
 
-										<img src="one-page/images/portfolio/mixed/4.jpg" alt="Open Imagination">
+                        <!-- Text -->
+                        <div class="text-wrapper">
 
-									</a>
+            
 
-									<div class="bg-overlay">
+                            <p class="text-h4">Ai native full stack 8gency</p>
+                            
 
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+                        </div>
+                        <!--/ Text -->
 
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+                    </div>
 
-												<h3><a href="#">Open Imagination</a></h3>
+                    <div class="c-col-3 sm-12">
 
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+                        <p style="color: #888">FOLLOW</p>
 
-											</div>
+                        <!-- Menu -->
+                        <ul class="menu">
 
-										</div>
+                            <li><a href="#.">TWITTER</a></li>
+                            <li><a href="#.">INSTAGRAM</a></li>
+                            
 
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+                        </ul>
+                        <!--/ Menu -->
 
-									</div>
+                    </div>
 
-								</div>
 
-							</div>
+                    <div class="c-col-3 sm-12">
 
-						</article>
+                        <!-- Text -->
+                        <div class="text-wrapper align-right scroll-button" data-scroll-to=0>
 
+                            <p>BACK TO TOP</p>
 
+                        </div>
+                        <!--/ Text -->
 
-						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+                    </div>
 
-							<div class="grid-inner">
+                </div>
 
-								<div class="portfolio-image">
+                <div class="wrapper footer-bottom-wrapper">
 
-									<a href="#">
+                    <div class="c-col-6">
 
-										<img src="one-page/images/portfolio/mixed/5.jpg" alt="Console Activity">
+                        <!-- Text -->
+                        <div class="text-wrapper">
 
-									</a>
+                            <p style="color: #888">© 2026 </p>
 
-									<div class="bg-overlay">
+                        </div>
+                        <!--/ Text -->
 
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+                    </div>
 
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+                    <div class="c-col-6">
+                        <!-- Logo removed -->
+                    </div>
 
-												<h3><a href="#">Console Activity</a></h3>
+                </div>
 
-												<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
+            </div>
 
-											</div>
+        </div>
+        <!--/ Footer -->
 
-										</div>
+    </div>
+    <!--/ Page -->
 
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/barba.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/scripts.js"></script>
 
-									</div>
-
-								</div>
-
-							</div>
-
-						</article>
-
-
-
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-
-							<div class="grid-inner">
-
-								<div class="portfolio-image">
-
-									<a href="#">
-
-										<img src="one-page/images/portfolio/mixed/6.jpg" alt="Open Imagination">
-
-									</a>
-
-									<div class="bg-overlay">
-
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
-
-												<h3><a href="#">Open Imagination</a></h3>
-
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-
-											</div>
-
-										</div>
-
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</article>
-
-
-
-						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
-
-							<div class="grid-inner">
-
-								<div class="portfolio-image">
-
-									<a href="#">
-
-										<img src="one-page/images/portfolio/mixed/7.jpg" alt="Backpack Contents">
-
-									</a>
-
-									<div class="bg-overlay">
-
-										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
-
-											<div class="portfolio-desc p-0 text-center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350">
-
-												<h3><a href="#">Backpack Contents</a></h3>
-
-												<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-
-											</div>
-
-										</div>
-
-										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</article>
-
-
-
-					</div><!-- #portfolio end -->
-
-
-
-					<div class="mt-5 text-center"><a href="#" class="button button-border button-circle fw-semibold">View More Projects</a></div>
-
-
-
-				</div>
-
-
-
-				<div id="section-services" class="page-section pt-0">
-
-
-
-					<div class="section m-0">
-
-						<div class="container">
-
-							<div class="mx-auto text-center" style="max-width: 900px;">
-
-								<h2 class="mb-0 fw-light ls-1">We enjoy working on the Services &amp; Products we provide as much as you need them. This help us in delivering your Goals easily. Browse through the wide range of services we provide.</h2>
-
-							</div>
-
-						</div>
-
-					</div>
-
-
-
-					<div class="row align-items-stretch">
-
-
-
-						<div class="col-lg-4 d-none d-md-block" style="background: url('images/services/main-bg.jpg') center center no-repeat; background-size: cover;"></div>
-
-						<div class="col-lg-8">
-
-							<div class="row align-items-stretch grid-border">
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-mobile op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Responsive Framework</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-presentation op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Beautifully Presented</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-puzzle op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Extensively Extendable</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-gears op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Powerfully Customizable</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-genius op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Geniusly Transformable</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-								<div class="col-lg-4 col-md-6 col-padding">
-
-									<div class="feature-box fbox-center fbox-dark fbox-plain">
-
-										<div class="fbox-icon">
-
-											<a href="#"><i class="icon-et-hotairballoon op-gradient-icon"></i></a>
-
-										</div>
-
-										<div class="fbox-content fbox-content-sm">
-
-											<h3>Industrial Support</h3>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-
-					</div>
-
-
-
-					<div class="section dark m-0">
-
-						<div class="mx-auto text-center" style="max-width: 900px;">
-
-							<h2 class="mb-0 fw-light ls-1">Like Our Services? Get an <a href="#" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-border button-circle button-light button-large my-0" style="position: relative; top: -3px;">Instant Quote</a></h2>
-
-						</div>
-
-					</div>
-
-
-
-					<div class="section parallax scroll-detect m-0 dark" style="padding: 150px 0;">
-
-						<img src="one-page/images/page/testimonials.jpg" class="parallax-bg">
-
-
-
-						<div class="container">
-
-
-
-							<div class="row justify-content-end">
-
-								<div class="col-md-7">
-
-									<div class="fslider testimonial testimonial-full text-center bg-transparent border-0 shadow-none p-0" data-arrows="false">
-
-										<div class="flexslider">
-
-											<div class="slider-wrap">
-
-												<div class="slide">
-
-													<p class="mb-4 fs-4 fw-light ls-1">Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque vero numquam?</p>
-
-													<h4 class="h5 mb-0 fw-medium">Steve Jobs</h4>
-
-													<small class="text-muted">Apple Inc.</small>
-
-												</div>
-
-												<div class="slide">
-
-													<p class="mb-4 fs-4 fw-light ls-1">Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
-
-													<h4 class="h5 mb-0 fw-medium">Collis Ta'eed</h4>
-
-													<small class="text-muted">Envato Inc.</small>
-
-												</div>
-
-												<div class="slide">
-
-													<p class="mb-4 fs-4 fw-light ls-1">Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
-
-													<h4 class="h5 mb-0 fw-medium">John Doe</h4>
-
-													<small class="text-muted">XYZ Inc.</small>
-
-												</div>
-
-											</div>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-
-
-						</div>
-
-
-
-					</div>
-
-
-
-				</div>
-
-
-
-				<div id="section-blog" class="page-section">
-
-
-
-					<h2 class="text-center text-uppercase fw-light ls-3 font-body">Recently From the Blog</h2>
-
-
-
-					<div class="section mb-0">
-
-						<div class="container">
-
-
-
-							<div class="row posts-md mt-5 col-mb-50 mb-0">
-
-
-
-								<div class="entry col-md-6">
-
-									<div class="grid-inner row align-items-center">
-
-										<div class="col-lg-6">
-
-											<div class="entry-image">
-
-												<a href="#"><img src="one-page/images/blog/1.jpg" alt="Paris"></a>
-
-											</div>
-
-										</div>
-
-										<div class="col-lg-6 mt-3 mt-lg-0">
-
-											<span class="before-heading fst-normal">Press &amp; Media</span>
-
-											<div class="entry-title text-transform-none">
-
-												<h3 class="fw-normal"><a href="#">Global Meetup Program is Launching!</a></h3>
-
-											</div>
-
-											<div class="entry-content">
-
-												<a href="#" class="more-link">Read more <i class="uil uil-angle-right-b"></i></a>
-
-											</div>
-
-										</div>
-
-									</div>
-
-								</div>
-
-
-
-								<div class="entry col-md-6">
-
-									<div class="grid-inner row align-items-center">
-
-										<div class="col-lg-6">
-
-											<div class="entry-image">
-
-												<a href="#"><img src="one-page/images/blog/2.jpg" alt="Paris"></a>
-
-											</div>
-
-										</div>
-
-										<div class="col-lg-6 mt-3 mt-lg-0">
-
-											<span class="before-heading fst-normal">Inside Scoops</span>
-
-											<div class="entry-title text-transform-none">
-
-												<h3 class="fw-normal"><a href="#">The New YouTube Economy unfolds itself</a></h3>
-
-											</div>
-
-											<div class="entry-content">
-
-												<a href="#" class="more-link">Read more <i class="uil uil-angle-right-b"></i></a>
-
-											</div>
-
-										</div>
-
-									</div>
-
-								</div>
-
-
-
-								<div class="entry col-md-6">
-
-									<div class="grid-inner row align-items-center">
-
-										<div class="col-lg-6">
-
-											<div class="entry-image">
-
-												<a href="#"><img src="one-page/images/blog/3.jpg" alt="Paris"></a>
-
-											</div>
-
-										</div>
-
-										<div class="col-lg-6 mt-3 mt-lg-0">
-
-											<span class="before-heading fst-normal">Video Blog</span>
-
-											<div class="entry-title text-transform-none">
-
-												<h3 class="fw-normal"><a href="#">Kicking Off Design Party in Style</a></h3>
-
-											</div>
-
-											<div class="entry-content">
-
-												<a href="#" class="more-link">Read more <i class="uil uil-angle-right-b"></i></a>
-
-											</div>
-
-										</div>
-
-									</div>
-
-								</div>
-
-
-
-								<div class="entry col-md-6">
-
-									<div class="grid-inner row align-items-center">
-
-										<div class="col-lg-6">
-
-											<div class="entry-image">
-
-												<a href="#"><img src="one-page/images/blog/4.jpg" alt="Paris"></a>
-
-											</div>
-
-										</div>
-
-										<div class="col-lg-6 mt-3 mt-lg-0">
-
-											<span class="before-heading fst-normal">Inspiration</span>
-
-											<div class="entry-title text-transform-none">
-
-												<h3 class="fw-normal"><a href="#">Top Ten Signs You're a Designer</a></h3>
-
-											</div>
-
-											<div class="entry-content">
-
-												<a href="#" class="more-link">Read more <i class="uil uil-angle-right-b"></i></a>
-
-											</div>
-
-										</div>
-
-									</div>
-
-								</div>
-
-
-
-							</div>
-
-
-
-						</div>
-
-					</div>
-
-
-
-					<div class="container mt-6">
-
-
-
-						<div id="oc-clients" class="owl-carousel mt-5 image-carousel carousel-widget" data-margin="80" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
-
-
-
-							<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
-
-							<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
-
-
-
-						</div>
-
-
-
-					</div>
-
-
-
-				</div>
-
-
-
-				<div id="section-contact" class="page-section pt-0">
-
-
-
-					<div class="row mx-0 mb-6 align-items-stretch">
-
-						<div class="col-lg-8 col-md-6 d-none d-md-block px-0">
-
-							<div class="gmap h-100" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="14" data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "one-page/images/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
-
-						</div>
-
-						<div class="col-lg-4 col-md-6 bg-contrast-100">
-
-							<div class="col-padding">
-
-								<h3 class="font-body fw-normal ls-1">Our Headquarters</h3>
-
-
-
-								<div style="font-size: 16px; line-height: 1.7;">
-
-									<address style="line-height: 1.7;">
-
-										<strong>North America:</strong><br>
-
-										795 Folsom Ave, Suite 600<br>
-
-										San Francisco, CA 94107<br>
-
-									</address>
-
-
-
-									<div class="clear mt-4"></div>
-
-
-
-									<address style="line-height: 1.7;">
-
-										<strong>Europe:</strong><br>
-
-										795 Folsom Ave, Suite 600<br>
-
-										San Francisco, CA 94107<br>
-
-									</address>
-
-
-
-									<div class="clear mt-5"></div>
-
-
-
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-
-
-					<div class="container">
-
-
-
-						<div class="mx-auto mt-5" style="max-width: 850px;">
-
-
-
-							<div class="form-widget">
-
-
-
-								<div class="form-result"></div>
-
-
-
-								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
-
-
-
-									<div class="form-process">
-
-										<div class="css3-spinner">
-
-											<div class="css3-spinner-scale-ripple">
-
-												<div></div>
-
-												<div></div>
-
-												<div></div>
-
-											</div>
-
-										</div>
-
-									</div>
-
-
-
-									<div class="col-md-6 mb-4">
-
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control border-form-control required" placeholder="Name">
-
-									</div>
-
-									<div class="col-md-6 mb-4">
-
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control border-form-control" placeholder="Email Address">
-
-									</div>
-
-
-
-									<div class="w-100"></div>
-
-
-
-									<div class="col-md-4 mb-4">
-
-										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control border-form-control" placeholder="Phone">
-
-									</div>
-
-
-
-									<div class="col-md-8 mb-4">
-
-										<input type="text" id="template-contactform-subject" name="subject" value="" class="required form-control border-form-control" placeholder="Subject">
-
-									</div>
-
-
-
-									<div class="w-100"></div>
-
-
-
-									<div class="col-12 mb-4">
-
-										<textarea class="required form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
-
-									</div>
-
-
-
-									<div class="col-12 text-center mb-4">
-
-										<button class="button button-border button-circle fw-medium ms-0 mt-4" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-
-										<br>
-
-										<small class="d-block mt-3 text-muted">We'll do our best to get back to you within 6-8 working hours.</small>
-
-									</div>
-
-
-
-									<div class="w-100"></div>
-
-
-
-									<div class="col-12 d-none">
-
-										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
-
-									</div>
-
-
-
-									<input type="hidden" name="prefix" value="template-contactform-">
-
-
-
-								</form>
-
-
-
-							</div>
-
-
-
-						</div>
-
-
-
-					</div>
-
-
-
-				</div>
-
-
-
-			</div>
-
-		</section><!-- #content end -->
-
-
-
-		<!-- Footer
-
-		============================================= -->
-
-		<footer id="footer" class="dark border-0">
-
-
-
-			<div class="container text-center">
-
-				<div class="footer-widgets-wrap">
-
-
-
-					<div class="row mx-auto">
-
-
-
-						<div class="col-lg-4">
-
-
-
-							<div class="widget">
-
-								<h4>Site Links</h4>
-
-
-
-								<ul class="list-unstyled footer-site-links mb-0">
-
-									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
-
-									<li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>
-
-									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Works</a></li>
-
-									<li><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Services</a></li>
-
-									<li><a href="#" data-scrollto="#section-blog" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Blog</a></li>
-
-									<li><a href="#" data-scrollto="#section-contact" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Contact</a></li>
-
-								</ul>
-
-							</div>
-
-
-
-						</div>
-
-
-
-						<div class="col-lg-4">
-
-
-
-							<div class="widget subscribe-widget" data-loader="button">
-
-								<h4>Subscribe</h4>
-
-
-
-								<div class="widget-subscribe-form-result"></div>
-
-								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
-
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control form-control-lg not-dark required email" placeholder="Your Email Address">
-
-									<button class="button button-border button-circle button-light mt-4" type="submit">Subscribe Now</button>
-
-								</form>
-
-							</div>
-
-
-
-						</div>
-
-
-
-						<div class="col-lg-4">
-
-
-
-							<div class="widget">
-
-								<h4>Contact</h4>
-
-
-
-								<p class="lead">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</p>
-
-
-
-								<div class="d-flex justify-content-center mt-4">
-
-									<a href="#" class="social-icon si-small bg-transparent h-bg-facebook" title="Facebook">
-
-										<i class="fa-brands fa-facebook-f"></i>
-
-										<i class="fa-brands fa-facebook-f"></i>
-
-									</a>
-
-									<a href="#" class="social-icon si-small bg-transparent h-bg-twitter" title="Twitter">
-
-										<i class="fa-brands fa-twitter"></i>
-
-										<i class="fa-brands fa-twitter"></i>
-
-									</a>
-
-									<a href="#" class="social-icon si-small bg-transparent h-bg-github" title="Github">
-
-										<i class="fa-brands fa-github"></i>
-
-										<i class="fa-brands fa-github"></i>
-
-									</a>
-
-									<a href="#" class="social-icon si-small bg-transparent h-bg-pinterest" title="Pinterest">
-
-										<i class="fa-brands fa-pinterest-p"></i>
-
-										<i class="fa-brands fa-pinterest-p"></i>
-
-									</a>
-
-								</div>
-
-							</div>
-
-
-
-						</div>
-
-
-
-					</div>
-
-
-
-				</div>
-
-			</div>
-
-
-
-			<div id="copyrights">
-
-				<div class="container text-center">
-
-					Copyrights Canvas 2020 | All Rights Reserved
-
-				</div>
-
-			</div>
-
-
-
-		</footer><!-- #footer end -->
-
-
-
-	</div><!-- #wrapper end -->
-
-
-
-	<!-- Go To Top
-
-	============================================= -->
-
-	<div id="gotoTop" class="uil uil-angle-up"></div>
-
-
-
-	<!-- JavaScripts
-
-	============================================= -->
-
-	<script src="js/plugins.min.js"></script>
-
-	<script src="js/functions.bundle.js"></script>
-
-
-
+    <!-- Hand Animation Script -->
+    <script src="js/hand-animation.js"></script>
 </body>
-
 </html>
